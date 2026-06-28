@@ -16,71 +16,83 @@ export default function App() {
     // Force scroll to top on mount before animating
     window.scrollTo(0, 0);
 
-    // Remove preloader class and add loaded class
-    document.documentElement.classList.remove('ss-preload');
-    document.documentElement.classList.add('ss-loaded');
+    const runEntrance = () => {
+      // Remove preloader class and add loaded class
+      document.documentElement.classList.remove('ss-preload');
+      document.documentElement.classList.add('ss-loaded');
 
-    // Create entrance animation timeline
-    const tl = anime.timeline({
-      easing: 'easeInOutCubic',
-      duration: 800,
-    });
+      // Clear any pre-existing viewport animation triggers
+      document.querySelectorAll('.ss-animated').forEach((item) => {
+        item.classList.remove('ss-animated');
+      });
 
-    tl.add({
-      targets: '#loader',
-      opacity: 0,
-      duration: 1000,
-    })
-    .add({
-      targets: '#preloader',
-      opacity: 0,
-      complete: () => {
-        const preloader = document.getElementById('preloader');
-        if (preloader) {
-          preloader.style.visibility = 'hidden';
-          preloader.style.display = 'none';
+      // Create entrance animation timeline
+      const tl = anime.timeline({
+        easing: 'easeInOutCubic',
+        duration: 800,
+      });
+
+      tl.add({
+        targets: '#loader',
+        opacity: 0,
+        duration: 1000,
+      })
+      .add({
+        targets: '#preloader',
+        opacity: 0,
+        complete: () => {
+          const preloader = document.getElementById('preloader');
+          if (preloader) {
+            preloader.style.visibility = 'hidden';
+            preloader.style.display = 'none';
+          }
         }
-      }
-    })
-    .add({
-      targets: '.s-header',
-      translateY: [-100, 0],
-      opacity: [0, 1]
-    }, '-=200')
-    .add({
-      targets: ['.s-intro .text-pretitle', '.s-intro .text-huge-title'],
-      translateX: [100, 0],
-      opacity: [0, 1],
-      delay: anime.stagger(400)
-    })
-    .add({
-      targets: '.circles span',
-      keyframes: [
-        { opacity: [0, 0.3] },
-        { opacity: [0.3, 0.1], delay: anime.stagger(100, { direction: 'reverse' }) }
-      ],
-      delay: anime.stagger(100, { direction: 'reverse' })
-    })
-    .add({
-      targets: '.intro-social li',
-      translateX: [-50, 0],
-      opacity: [0, 1],
-      delay: anime.stagger(100, { direction: 'reverse' })
-    })
-    .add({
-      targets: '.intro-scrolldown',
-      translateY: [100, 0],
-      opacity: [0, 1]
-    }, '-=800');
+      })
+      .add({
+        targets: '.s-header',
+        translateY: [-100, 0],
+        opacity: [0, 1]
+      }, '-=200')
+      .add({
+        targets: ['.s-intro .text-pretitle', '.s-intro .text-huge-title'],
+        translateX: [100, 0],
+        opacity: [0, 1],
+        delay: anime.stagger(400)
+      })
+      .add({
+        targets: '.circles span',
+        keyframes: [
+          { opacity: [0, 0.3] },
+          { opacity: [0.3, 0.1], delay: anime.stagger(100, { direction: 'reverse' }) }
+        ],
+        delay: anime.stagger(100, { direction: 'reverse' })
+      })
+      .add({
+        targets: '.intro-social li',
+        translateX: [-50, 0],
+        opacity: [0, 1],
+        delay: anime.stagger(100, { direction: 'reverse' })
+      })
+      .add({
+        targets: '.intro-scrolldown',
+        translateY: [100, 0],
+        opacity: [0, 1]
+      }, '-=800');
+    };
+
+    // If page is already loaded, run animation immediately, otherwise listen for load event
+    if (document.readyState === 'complete') {
+      runEntrance();
+    } else {
+      window.addEventListener('load', runEntrance);
+      return () => {
+        window.removeEventListener('load', runEntrance);
+      };
+    }
   }, []);
 
   return (
     <div id="top" className="s-pagewrap">
-      {/* Preloader */}
-      <div id="preloader">
-        <div id="loader" />
-      </div>
-
       {/* Decorative Circles */}
       <div className="circles">
         <span />

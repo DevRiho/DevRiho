@@ -37,12 +37,12 @@ const projects = [
   {
     id: 'modal-04',
     category: 'Website',
-    title: 'MindFlow AI',
-    cardImage: '/images/Screenshot 2025-10-26 152756.png',
-    modalImage: '/images/Screenshot 2025-10-26 152756.png',
-    projectUrl: 'https://mindflowx.netlify.app/',
-    description: 'AI SaaS Landing Page - Modern responsive landing page with animations',
-    modalCategories: ['Website']
+    title: 'Lunéva.',
+    cardImage: '/images/lun_va.png',
+    modalImage: '/images/lun_va.png',
+    projectUrl: 'https://lun-va.vercel.app/',
+    description: 'An e-commerce platform showcasing luxury ladies\' bags, featuring collections of totes, crossbody bags, and clutches with an elegant design.',
+    modalCategories: ['E-commerce']
   },
   {
     id: 'modal-05',
