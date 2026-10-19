@@ -27,7 +27,6 @@ I build modern web applications, beautiful user interfaces, scalable backends, a
 ### Frontend
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
-![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=next.js)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript)
 ![HTML5](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5)
 ![CSS3](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3)
@@ -52,18 +51,6 @@ I build modern web applications, beautiful user interfaces, scalable backends, a
 
 # 🚀 Featured Projects
 
-## 🤖 AIRA
-AI-powered research assistant built with React, Node.js, MongoDB, Pinecone and Google Gemini.
-
-**Features**
-
-- AI Chat
-- Document Intelligence
-- Semantic Search
-- Knowledge Base
-- Beautiful Dashboard
-
----
 
 ## 🛍 Lunéva
 
