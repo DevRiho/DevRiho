@@ -13,7 +13,7 @@ I build modern web applications, beautiful user interfaces, scalable backends, a
 ## 🚀 About Me
 
 - 💻 Full-Stack JavaScript Developer
-- ⚛️ React.js & Next.js Developer
+- ⚛️ React.js Developer
 - 🟢 Node.js & Express Backend Developer
 - 🎨 UI/UX Designer & Graphic Designer
 - 🤖 Passionate about AI Applications
