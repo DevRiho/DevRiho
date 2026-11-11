@@ -49,12 +49,15 @@ export function About() {
           </h2>
 
           <ul className="skills-list" data-animate-el>
-            <li>Creating dynamic, responsive user interfaces with React and Redux</li>
-            <li>Developing RESTful APIs using Express.js and Node.js</li>
-            <li>Designing scalable databases with MongoDB and Mongoose</li>
-            <li>Implementing authentication, authorization, and real-time features</li>
-            <li>Managing version control and collaboration with Git</li>
-            <li>Containerizing applications for consistency and scalability with Docker</li>
+            <li>Building modern, dynamic, and responsive user interfaces using React.js, JavaScript, Tailwind CSS, and HTML/CSS.</li>
+            <li>Developing scalable RESTful APIs and backend services using Node.js and Express.js.</li>
+            <li>Designing, managing, and optimizing MongoDB databases using Mongoose.</li>
+            <li>Implementing secure authentication and authorization systems using JWT, bcrypt, middleware, and role-based access control (RBAC).</li>
+            <li>Building full-stack MERN applications, including e-commerce platforms, dashboards, and web management systems.</li>
+            <li>Integrating third-party APIs, payment gateways, and external services into web applications.</li>
+            <li>Structuring reusable React components and maintaining clean, maintainable application architecture.</li>
+            <li>Managing source code, version control, and project collaboration using Git and GitHub.</li>
+            <li>Testing, debugging, and deploying web applications using Postman, Vercel, and Render.</li>
           </ul>
         </div>
       </div>

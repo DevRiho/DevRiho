@@ -18,21 +18,19 @@ const projects = [
     title: 'Thrift Store',
     cardImage: '/images/Screenshot 2025-10-17 090049.png',
     modalImage: '/images/Thrift.png',
-    projectUrl: 'https://thriftstor.netlify.netlify.app/#/', // Wait, in original HTML it is https://thriftstor.netlify.app/#/ but let's check
-    // Ah, line 298 in original HTML: "https://thriftstor.netlify.app/#/"
-    projectUrlRaw: 'https://thriftstor.netlify.app/#/',
+    projectUrl: 'https://thriftstor.netlify.app/#/',
     description: 'React.js web application designed for showcasing and managing thrift fashion collections, built with a clean user interface and responsive design principles.',
     modalCategories: ['E-commerce']
   },
   {
     id: 'modal-03',
-    category: 'Website', // original was lowercase 'website', let's use capital 'Website' for consistency
-    title: 'Green Haven',
-    cardImage: '/images/Screenshot 2025-10-24 183036.png',
-    modalImage: '/images/Screenshot 2025-10-24 183036.png',
-    projectUrl: 'https://greenhavenco.netlify.app/',
-    description: 'A responsive plant shop website created using HTML, CSS and JavaScript. The project demonstrates my skills in front-end development, focusing on clean layout design, responsive styling, and user interaction through JavaScript.',
-    modalCategories: ['Landing page website']
+    category: 'Website',
+    title: 'BigClubTalks',
+    cardImage: '/images/bigclubtalk.png',
+    modalImage: '/images/bigclubtalk.png',
+    projectUrl: 'https://bigclubtalk-frontend.vercel.app/',
+    description: 'A modern sports publishing and football news platform for breaking news, transfers, analysis, club stories, and fan opinions.',
+    modalCategories: ['Website', 'Full-Stack']
   },
   {
     id: 'modal-04',
@@ -55,9 +53,6 @@ const projects = [
     modalCategories: ['Website']
   }
 ];
-
-// Correct some URLs based on actual values
-projects[1].projectUrl = 'https://thriftstor.netlify.app/#/';
 
 export function Works() {
   const [activeModalId, setActiveModalId] = useState(null);
@@ -102,7 +97,7 @@ export function Works() {
           </p>
 
           <ul className="folio-list row block-lg-one-half block-stack-on-1000">
-            {projects.map((project, idx) => (
+            {projects.map((project) => (
               <li className="folio-list__item column" data-animate-el key={project.id}>
                 <a
                   className="folio-list__item-link"
